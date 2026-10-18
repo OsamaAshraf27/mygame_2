@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لعبة الثعبان - OSAMA STORE</title>
+    <title>منصة ألعاب أسامة - Osama Games Hub</title>
     <style>
         body {
             background-color: #121212;
@@ -11,50 +11,74 @@
             font-family: 'Tahoma', sans-serif;
             text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
         }
         h1 {
             color: #00ffcc;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
-        .score-board {
-            font-size: 20px;
-            margin-bottom: 15px;
-            background: #1e1e1e;
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 8px;
-            border: 1px solid #333;
-        }
-        canvas {
-            background-color: #000;
-            border: 4px solid #00ffcc;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
-            display: block;
-            margin: 0 auto;
-        }
-        .footer {
-            margin-top: 15px;
+        .subtitle {
             color: #888;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+        .games-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .game-card {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 12px;
+            width: 280px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #00ffcc;
+        }
+        .game-card h3 {
+            color: #00ffcc;
+            margin-bottom: 10px;
+        }
+        .game-card p {
+            color: #bbb;
             font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .play-btn {
+            background-color: #00ffcc;
+            color: #121212;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .play-btn:hover {
+            background-color: #00cca3;
         }
     </style>
 </head>
 <body>
 
-    <h1>🐍 Snake Game 🐍</h1>
-    <p class="footer">تصميم وبرمجة: أسامة</p>
+    <h1>🎮 منصة ألعاب أسامة</h1>
+    <p class="subtitle">موقعك المفضل للاستمتاع بأفضل الألعاب الخفيفة والممتعة</p>
 
-    <div class="score-board">
-        النقاط: <span id="score">0</span> | أعلى نقاط: <span id="high-score">0</span>
+    <div class="games-container">
+        <!-- كرت لعبة الثعبان -->
+        <div class="game-card">
+            <h3>🐍 لعبة الثعبان (Snake)</h3>
+            <p>لعبة الأركيد الكلاسيكية الشهيرة، اجمع النقاط وتجنب الاصطدام!</p>
+            <a href="snake.html" class="play-btn">العب الآن</a>
+        </div>
     </div>
 
-    <div>
-        <canvas id="gameCanvas" width="400" height="400"></canvas>
-    </div>
-
-    <!-- ربط ملف الجافاسكريبت للعبة -->
-    <script src="script.js"></script>
 </body>
 </html>
